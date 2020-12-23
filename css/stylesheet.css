@@ -7,6 +7,15 @@ html {
   font-size: 62.5%;
 }
 
+header {
+  width: 100%;
+  height: 5rem;
+  background: green;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+}
+
 #post-list h1 {
   padding: 1rem;
   font-size: 3.2rem;
@@ -70,6 +79,7 @@ html {
 }
 
 #post-list .container .pagination .nav-links {
+  height: 4rem;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -82,5 +92,14 @@ html {
 
 #post-list .container .pagination .nav-links .current {
   background-color: gray;
+}
+
+footer {
+  width: 100%;
+  height: 5rem;
+  background: green;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=stylesheet.css.map */
