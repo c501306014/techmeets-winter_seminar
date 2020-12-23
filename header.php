@@ -11,5 +11,5 @@
 <body>
 
 <header>
-    header
+    <?php get_search_form(); ?>
 </header>
