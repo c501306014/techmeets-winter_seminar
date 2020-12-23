@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+#post-list{
+    h1{
+        padding: 1rem;
+        font-size: 3.2rem;
+        border-left: 3px solid red;
+    }
+    .container{
+        width: 60rem;
+        display: flex;
+        flex-wrap: wrap;
+        .item{
+            padding: 1rem;
+            width: 50%;
+            text-align: center;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            .post-image{
+                height: 15rem;
+                width: auto;
+            }
+            .post-title{
+                h2{
+                    font-size: 1.8rem;
+                }
+            }
+            .post-meta{
+                text-align: right;
+            }
+            .excerpt{
+                font-size: 1.2rem;
+                text-align: left;
+            }
+        }
+        .pagination{
+            width:100%;
+            .screen-reader-text {
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute !important;
+                width: 1px;
+                word-wrap: normal !important;
+            }
+            .nav-links{
+                font-size: 1.2rem;
+                text-align: center;
+                .page-numbers{
+                    padding: 1rem;
+                    border: 1px solid black;
+                    border-radius: 10%;
+                }
+                .current{
+                    background-color: gray;
+                }
+            }
+        }
+    }
+
+}
