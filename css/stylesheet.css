@@ -94,6 +94,11 @@ header {
   background-color: gray;
 }
 
+.post-image img {
+  height: 15rem;
+  width: auto;
+}
+
 footer {
   width: 100%;
   height: 5rem;

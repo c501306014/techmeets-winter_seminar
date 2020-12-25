@@ -49,7 +49,59 @@
 
 <?php endwhile;endif; ?>
 
+<!-- 関連記事一覧（タグが同一の記事） -->
+<section class="related-posts">
+    <?php
+    $current_tags = get_the_tags(); 
+    if($current_tags):
+        foreach ($current_tags as $tag):
+            $current_tag_list[] = $tag->term_id;
+        endforeach;
 
+        $args = array(
+            'tag__in'       => $current_tag_list,
+            'post__not_in'  => array($post->ID),    
+            'posts_per_page'=> 3,
+        );
+        $related_posts = new WP_Query($args);
+        if($related_posts->have_posts()):
+            ?>
+            <h3>関連記事</h3>
+            <ul class="related-posts-list">
+                <?php
+                while($related_posts->have_posts()): $related_posts->the_post();
+                ?>
+                <li class="item">
+                    <div class="post-image">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php
+                            if(has_post_thumbnail()){
+                                the_post_thumbnail();
+                            }else{
+                            }
+                            ?>
+                        </a>
+                    </div>
+                    <div class="post-title">
+                        <h2><?php the_title(); ?></h2>
+                    </div>
+                    <div class="post-meta">
+                        <p><?php the_time('Y年m月d日'); ?></p>
+                        <p><?php the_tags(); ?></p>
+                        <p>カテゴリー：<?php the_category( ',' ); ?></p>
+                    </div>
+                    <div class="excerpt">
+                        <?php 
+                        $content=get_the_content();
+                        echo wp_trim_words( $content, 30,);
+                        ?>
+                    </div>
+                </li>
+                <?php endwhile; ?>
+            </ul>
+        <?php endif; ?>
+    <?php endif;?>
+</section>
 
 
 <?php get_footer() ?>
