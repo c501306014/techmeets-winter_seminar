@@ -11,5 +11,21 @@
 <body>
 
 <header>
-    <?php get_search_form(); ?>
+    <!-- <?php get_search_form(); ?> -->
+    <?php $args = array(
+        'parent' => 0,
+        'orderby' => 'term_order',
+        'order' => 'ASC'
+    );
+    $categories = get_categories( $args );
+    // echo var_dump($categories);
+    ?>
+
+    <?php
+    foreach( $categories as $category ):
+    ?>
+        <li>
+            <a href="<?php echo get_category_link($category->term_id) ?>"><?php echo $category->name; ?></a>
+        </li>
+    <?php endforeach; ?>
 </header>
