@@ -1,5 +1,6 @@
 <?php get_header() ?>
 
+
 <?php if(have_posts()): while(have_posts()) : the_post(); ?>
 
 <div class="post-title">
@@ -13,7 +14,36 @@
         echo get_category_parents( $cat[0], true, '&nbsp;>&nbsp;' ); ?>
     <?php the_title(''); ?>
 </div>
-<!-- パンくずメニュー -->
+<!-- /パンくずメニュー -->
+
+<!-- カスタムフィールドメタ情報 -->
+<div class="custom-field">
+    <p>カスタムフィールドゾーン</p>
+    <?php 
+        $meta = get_post_meta( get_the_ID(),'html' );
+        if($meta){
+            foreach ($meta as $val ) {
+                echo $val;
+            }
+        }
+
+        $meta = get_post_meta( get_the_ID(), 'image', );
+        if($meta){
+            foreach ($meta as $val) {
+                echo "<img src='". $val . "' height='150px'> <br>";
+            }
+        }
+
+        $meta = get_post_meta( get_the_ID(),'text' );
+        if($meta){
+            foreach ($meta as $val ) {
+                echo esc_html( $val ). "<br>";
+            }
+        }
+    ?>
+    <p>カスタムフィールドゾーンここまで</p>
+</div>
+<!-- /カスタムフィールドメタ情報 -->
 
 
 <div class="post-image">
