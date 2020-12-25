@@ -107,4 +107,16 @@ footer {
   color: white;
   font-size: 4rem;
 }
+
+.single h2 {
+  color: red;
+}
+
+.single h3 {
+  color: green;
+}
+
+.single h4 {
+  color: blue;
+}
 /*# sourceMappingURL=stylesheet.css.map */

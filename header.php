@@ -11,7 +11,7 @@
     <title>techmeets_winter_seminar</title>
     <?php wp_head() ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <header>
     <!-- <?php get_search_form(); ?> -->
