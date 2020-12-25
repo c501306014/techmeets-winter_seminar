@@ -8,7 +8,12 @@ add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
 // add customize functions
 function my_setup(){
+    // i-chatch image
     add_theme_support( 'post-thumbnails' );
+    // custom menu
+    register_nav_menus( array(
+        'header-nav' => 'ヘッダーナビゲーション'
+    ));
 }
 add_action( 'after_setup_theme', 'my_setup' );
 

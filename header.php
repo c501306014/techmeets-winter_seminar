@@ -31,6 +31,10 @@
     <?php endforeach; ?>
 
     <!-- links -->
-    <a href="<?php get_permalink('45'); ?>">お問い合わせ</a>
+    <?php 
+        wp_nav_menu(array(
+            'theme_location' => 'header-nav'
+        ));
+    ?>
     
 </header>
