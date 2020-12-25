@@ -11,3 +11,13 @@ function my_setup(){
     add_theme_support( 'post-thumbnails' );
 }
 add_action( 'after_setup_theme', 'my_setup' );
+
+
+// add widget
+function my_theme_widgets_init(){
+    register_sidebar( array(
+        'name' => 'Sidebar Widgets',
+        'id' => 'sidebar-widgets'
+    ) );
+}
+add_action( 'widgets_init', 'my_theme_widgets_init' );

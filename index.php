@@ -31,5 +31,13 @@
     </div>
 </section>
 
+<?php if(is_active_sidebar('sidebar-widgets')):?>
+    <ul>
+        <?php dynamic_sidebar('sidebar-widgets'); ?>    
+    </ul>
+    <?php else:?>
+        <h1>sidebar あらへんで</h1>
+<?php endif; ?>
+
 
 <?php get_footer() ?>
