@@ -21,6 +21,7 @@
     // echo var_dump($categories);
     ?>
 
+    <!-- category -->
     <?php
     foreach( $categories as $category ):
     ?>
@@ -28,4 +29,8 @@
             <a href="<?php echo get_category_link($category->term_id) ?>"><?php echo $category->name; ?></a>
         </li>
     <?php endforeach; ?>
+
+    <!-- links -->
+    <a href="<?php get_permalink('45'); ?>">お問い合わせ</a>
+    
 </header>
