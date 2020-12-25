@@ -6,6 +6,16 @@
     <h1><?php the_title(); ?></h1>
 </div>
 
+<!-- パンくずメニュー -->
+<div>
+    <a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a>&nbsp;>&nbsp;
+    <?php $cat = get_the_category();
+        echo get_category_parents( $cat[0], true, '&nbsp;>&nbsp;' ); ?>
+    <?php the_title(''); ?>
+</div>
+<!-- パンくずメニュー -->
+
+
 <div class="post-image">
     <a href="<?php the_permalink(); ?>">
         <?php the_post_thumbnail( 'thumbnail' ); ?>
