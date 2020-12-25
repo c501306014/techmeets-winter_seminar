@@ -35,6 +35,21 @@
 <?php previous_post_link('&laquo; %link', '前の記事へ');?>
 <?php next_post_link('%link &raquo;', '後の記事へ');?>
 
+<!-- share links -->
+<a href="https://twitter.com/share?
+    text=<?php the_title(); ?>
+    &url=<?php the_permalink(); ?>">
+        <i class="fab fa-twitter"></i>
+</a>
+
+<a href="https://www.facebook.com/sharer/sharer.php
+?u=<?php the_permalink(); ?>">
+<i class="fab fa-facebook-f"></i>
+</a>
+
 <?php endwhile;endif; ?>
+
+
+
 
 <?php get_footer() ?>

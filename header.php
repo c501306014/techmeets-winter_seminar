@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- read ress.css -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+    <!-- read fawe -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     <title>techmeets_winter_seminar</title>
     <?php wp_head() ?>
 </head>
@@ -36,5 +39,7 @@
             'theme_location' => 'header-nav'
         ));
     ?>
+
+
     
 </header>
