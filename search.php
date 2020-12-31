@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+
+<main>
+    <section>
+    <h1>検索結果</h1>
+    
 <?php if(have_posts()): 
     if(isset($_GET['s']) && empty($_GET['s'])){
         // 検索キーワードが未入力の場合のテキストを指定
@@ -16,7 +21,13 @@
         </li>
     
     <?php endwhile; ?>
-    <?php the_posts_pagination(); ?>
+    <!-- <?php the_posts_pagination(); ?> -->
+    <!-- page-nation -->
+    <div class="pagination-box">
+        <?php if(function_exists('responsive_pagination')){
+            responsive_pagination($wp_query->max_num_pages);
+        } ?>
+    </div>
 </ul>
 
 <?php 
@@ -25,6 +36,8 @@
 endif;
 ?>
 
+</section>
 
+</main>
 
 <?php get_footer() ?>

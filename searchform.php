@@ -1,4 +1,7 @@
-<form method="get" id="serchform" action="<?php bloginfo('url'); ?>">
-    <input type="text" name="s" id="s" placeholder="SERACH" />
-    <button type="submit">検索する</button>
+<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+    <div class="input-field">
+        <input type="search" name="s" id="search" required />
+        <label class="label-icon" for="search"><i class="material-icons">search</i>  </label>
+        <i class="material-icons">close</i>
+    </div>
 </form>

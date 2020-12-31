@@ -1,18 +1,52 @@
+html{
+    // font-size: 62.5%;
+}
 *{
     box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
+    // font-size: 1.6rem;
 }
 
 header{
     width: 100%;
-    height: 50rem;
-    background: green;
     text-align: center;
-    color: white;
-    font-size: 1.2rem;
+    // font-size: 1.6rem;
+    #header-logo{
+        height: 12rem;
+        .custom-logo-link{
+            .custom-logo{
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+nav{
+    position: sticky;
+    top: 0;
+
+    font-size: 1.6rem;
+
+    .nav-wrapper{
+        display: flex; 
+        justify-content: space-evenly;
+        #searchform{
+            #search{
+                margin: 0;
+            }
+            .input-field{
+                .label-icon{
+                    top: -.8rem;
+                }
+            }
+        }
+    }
+}
+
+main{
+    width: 900px;
+    padding: 0 20px;
+    margin: auto;
+
 }
 
 #post-list{
@@ -85,12 +119,6 @@ header{
 }
 
 footer{
-    width: 100%;
-    height: 5rem;
-    background: green;
-    text-align: center;
-    color: white;
-    font-size: 4rem;
 }
 
 .single {
@@ -103,4 +131,8 @@ footer{
     h4{
         color:blue;
     }
+}
+
+.pagination-box{
+    margin: 1rem auto;
 }
