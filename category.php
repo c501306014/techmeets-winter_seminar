@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+
+<section>
+<main>
 <h1><?php single_cat_title(); ?></h1>
 
 <div>
@@ -51,11 +54,16 @@ echo get_category_parents($cat[0], true, '&nbsp;'); ?>
         if( have_posts() ):while( have_posts() ):the_post();
             get_template_part( '/src/articlelist' );
         endwhile; endif; 
-        the_posts_pagination(); ?>
+         ?>
+        <!-- page-nation -->
+        <div class="pagination-box">
+            <?php if(function_exists('responsive_pagination')){
+                responsive_pagination($wp_query->max_num_pages);
+            } ?>
+        </div>
     </div>    
-    
-
-
 
 </div>
+</main>
+</section>
 <?php get_footer(); ?>
