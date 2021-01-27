@@ -145,4 +145,8 @@ main {
 .pagination-box {
   margin: 1rem auto;
 }
+
+.material-icons {
+  vertical-align: middle;
+}
 /*# sourceMappingURL=stylesheet.css.map */
