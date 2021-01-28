@@ -3,6 +3,7 @@
           box-sizing: border-box;
 }
 
+/* header */
 header {
   width: 100%;
   text-align: center;
@@ -17,11 +18,11 @@ header #header-logo .custom-logo-link .custom-logo {
   width: auto;
 }
 
+/* navigation */
 nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  font-size: 1.6rem;
 }
 
 nav .nav-wrapper {
@@ -33,117 +34,13 @@ nav .nav-wrapper {
           justify-content: space-evenly;
 }
 
-nav .nav-wrapper #searchform #search {
-  margin: 0;
-}
-
 nav .nav-wrapper #searchform .input-field .label-icon {
-  top: -.8rem;
+  /* adjust search icon */
+  top: -.64rem;
 }
 
-main {
-  width: 900px;
-  padding: 0 20px;
-  margin: auto;
-}
-
-#post-list h1 {
-  padding: 1rem;
-  font-size: 3.2rem;
-  border-left: 3px solid red;
-}
-
-#post-list .container {
-  width: 60rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#post-list .container .item {
-  padding: 1rem;
-  width: 50%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#post-list .container .item .post-image {
-  height: 15rem;
-  width: auto;
-}
-
-#post-list .container .item .post-title h2 {
-  font-size: 1.8rem;
-}
-
-#post-list .container .item .post-meta {
-  text-align: right;
-}
-
-#post-list .container .item .excerpt {
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-#post-list .container .pagination {
-  width: 100%;
-}
-
-#post-list .container .pagination .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-}
-
-#post-list .container .pagination .nav-links {
-  height: 4rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-#post-list .container .pagination .nav-links .page-numbers {
-  padding: 1rem;
-  border: 1px solid black;
-  border-radius: 10%;
-}
-
-#post-list .container .pagination .nav-links .current {
-  background-color: gray;
-}
-
-.post-image img {
-  height: 15rem;
-  width: auto;
-}
-
-.single h2 {
-  color: red;
-}
-
-.single h3 {
-  color: green;
-}
-
-.single h4 {
-  color: blue;
-}
-
-.pagination-box {
-  margin: 1rem auto;
+nav .nav-wrapper .dropdown-button {
+  width: 12rem;
 }
 
 .material-icons {

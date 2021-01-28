@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<main>
-    <section>
+<section>
+    <main>
         <h1>検索結果</h1>
 
         <?php if (have_posts()) :
@@ -35,8 +35,8 @@
         endif;
         ?>
 
-    </section>
+    </main>
+</section>
 
-</main>
 
 <?php get_footer() ?>
