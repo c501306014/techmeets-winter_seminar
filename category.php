@@ -3,7 +3,6 @@
 <section>
     <main>
         <h1><?php single_cat_title(); ?></h1>
-
         <div>
             <?php
             if (category_description()) :
@@ -16,37 +15,6 @@
         <a href="<?php bloginfo('url'); ?>">TOP</a>&nbsp;>&nbsp;
         <?php $cat = get_the_category();
         echo get_category_parents($cat[0], true, '&nbsp;'); ?>
-        <!-- 
-        <div>
-            <?php
-            $tax_slug = 'category';
-            $id = get_query_var('cat');
-            $term = get_term($id, $tax_slug);
-            ?>
-
-            <ul class="breadcrumb">
-                <li>
-                    <a href="<?php echo home_url('/'); ?>">ホーム</a>
-                </li>
-                <?php
-                $parent_term_id = $term->parent;
-                $parent_term = get_category($parent_term_id);
-                if ($parent_term_id) :
-                ?>
-                    <li>
-                        &nbsp;&gt;&nbsp;
-                        <a href="<?php get_category_link($parent_term_id) ?>">
-                            <?php echo $parent_term->name ?>
-                        </a>
-                    </li>
-                <?php endif; ?>
-                <li>
-                    &nbsp;&gt;&nbsp;
-                    <a href="<?php get_category_link($term->id) ?>">
-                        <?php echo $term->name; ?>
-                    </a>
-                </li>
-            </ul> -->
         <!-- /パンくずメニュー -->
 
         <div class="container">
@@ -62,8 +30,6 @@
                     responsive_pagination($wp_query->max_num_pages);
                 } ?>
             </div>
-        </div>
-
         </div>
     </main>
 </section>
