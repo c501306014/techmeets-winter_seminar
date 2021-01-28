@@ -6,7 +6,7 @@
         <p>wordpressを使って、ブログや情報発信等の記事を簡単に管理できます。</p>
         <p>カテゴリやタグ毎に記事を管理することができます。</p>
         <p>一度WEBサイトを構築できれば、プログラミング等の知識がなくてもサイトの運用管理を簡単に行うことができます。</p>
-        <div class="container">
+        <div class="container row">
             <?php
             if (have_posts()) : while (have_posts()) : the_post();
                     get_template_part('/src/articlelist');

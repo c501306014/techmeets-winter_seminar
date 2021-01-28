@@ -5,6 +5,7 @@ function my_scripts()
 {
     wp_enqueue_style("stylesheet", get_template_directory_uri() . "/css/stylesheet.css", array(), '1.0.0', 'all');
     wp_enqueue_script("materialize", get_template_directory_uri() . "/js/materialize_contact_form.js", array(), false, true);
+    wp_enqueue_script("hamburger-menu", get_template_directory_uri() . "/js/hamburger-menu.js", array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
 

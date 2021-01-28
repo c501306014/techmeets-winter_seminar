@@ -15,7 +15,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-    <title>techmeets_winter_seminar</title>
+    <title>wordpress-sample-site</title>
     <?php wp_head() ?>
 </head>
 
@@ -36,15 +36,8 @@
 
     <nav>
         <div class="nav-wrapper">
-            <!-- links -->
-            <?php if (is_active_sidebar('header-widgets')) : ?>
-                <ul>
-                    <?php dynamic_sidebar('header-widgets'); ?>
-                </ul>
-            <?php else : ?>
-                <h1>not found sidebar</h1>
-            <?php endif; ?>
-
+            <!-- search form -->
+            <?php get_search_form(); ?>
             <!-- category -->
             <?php $args = array(
                 'parent' => 0,
@@ -61,9 +54,24 @@
                 </ul>
                 <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2'>カテゴリー</a>
             </div>
-
-            <!-- search form -->
-            <?php get_search_form(); ?>
-
+            <!-- links -->
+            <?php if (is_active_sidebar('header-widgets')) : ?>
+                <ul class="right hide-on-med-and-down">
+                    <?php dynamic_sidebar('header-widgets'); ?>
+                </ul>
+            <?php else : ?>
+                <h1>not found sidebar</h1>
+            <?php endif; ?>
+            <!-- mobile hamburger menu -->
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+
+    <!-- links-mobile -->
+    <?php if (is_active_sidebar('header-widgets')) : ?>
+        <ul id="slide-out" class="side-nav">
+            <?php dynamic_sidebar('header-widgets'); ?>
+        </ul>
+    <?php else : ?>
+        <h1>not found sidebar</h1>
+    <?php endif; ?>
