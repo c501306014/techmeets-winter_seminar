@@ -198,6 +198,9 @@ nav .nav-wrapper .dropdown-button {
     font-size: 1.6rem;
     font-weight: bold;
   }
+  img {
+    height: auto;
+  }
   section {
     max-width: 300px;
   }
