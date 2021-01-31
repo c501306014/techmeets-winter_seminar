@@ -4,6 +4,8 @@ html {
 
 h1 {
     font-size: 3.2rem;
+    padding: 1rem;
+    border-left: 3px solid red;
 }
 
 h2 {
@@ -14,8 +16,10 @@ a,
 button,
 h3,
 i,
+input,
 p,
-span {
+span,
+.btn {
     font-size: 1.6rem;
 }
 
@@ -24,36 +28,23 @@ section {
     margin: 0 auto;
 }
 
-.article-list-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30%;
-    padding: 2rem;
-    margin: 1rem auto;
-    text-align: center;
-    background-color: #ccf7ff;
-    border-radius: 1rem;
+/* custom of materialize css */
+.material-icons {
+    vertical-align: middle;
+}
 
-    .post-image {
-        background-color: #fff;
-        border-radius: 1rem;
-    }
-
-    .post-title {
-        h2 {
-            font-size: 1.6rem;
-            font-weight: bold;
-        }
-    }
-
-    .post-meta {
-        text-align: right;
-    }
-
-    .excerpt {
-        margin-top: 1rem;
-        font-size: 1.2rem;
-        text-align: left;
-    }
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+    font-size: 1.6rem;
 }

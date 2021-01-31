@@ -2,50 +2,68 @@
     @import "common-sp";
 
 
-    /* section post-list @index.php */
-    #post-list {
-        main {
-            h1 {
+    .article-list-container {
+        .article-list-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 2rem;
+            margin: 1rem auto;
+            text-align: center;
+            background-color: #ccf7ff;
+            border-radius: 1rem;
+
+            .post-image {
+                background-color: #fff;
+                border-radius: 1rem;
+            }
+
+            .post-title {
+                h2 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                }
+            }
+
+            .post-meta {
+                text-align: right;
+            }
+
+            .excerpt {
+                margin-top: 1rem;
+                font-size: 1.2rem;
+                text-align: left;
+            }
+        }
+    }
+
+    .pagination-box .pagination {
+        margin: 1rem auto;
+        text-align: center;
+
+        .screen-reader-text {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            word-wrap: normal !important;
+        }
+
+        .nav-links {
+            height: 4rem;
+            font-size: 1.2rem;
+            text-align: center;
+
+            .page-numbers {
                 padding: 1rem;
-                font-size: 3.2rem;
-                border-left: 3px solid red;
+                border: 1px solid black;
+                border-radius: 10%;
             }
 
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            .pagination-box .pagination {
-                margin: 1rem auto;
-                text-align: center;
-
-                .screen-reader-text {
-                    position: absolute !important;
-                    width: 1px;
-                    height: 1px;
-                    overflow: hidden;
-                    clip: rect(1px, 1px, 1px, 1px);
-                    word-wrap: normal !important;
-                }
-
-                .nav-links {
-                    height: 4rem;
-                    font-size: 1.2rem;
-                    text-align: center;
-
-                    .page-numbers {
-                        padding: 1rem;
-                        border: 1px solid black;
-                        border-radius: 10%;
-                    }
-
-                    .current {
-                        background-color: gray;
-                    }
-                }
+            .current {
+                background-color: gray;
             }
         }
     }

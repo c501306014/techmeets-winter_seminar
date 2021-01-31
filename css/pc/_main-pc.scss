@@ -1,0 +1,140 @@
+@import "common";
+
+/* header */
+header {
+    width: 100%;
+    text-align: center;
+
+    #header-logo {
+        height: 8rem;
+
+        .custom-logo-link .custom-logo {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+/* navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+        * {
+            font-size: 1.6rem;
+        }
+
+
+        #searchform {
+            width: 20rem;
+
+            .input-field .label-icon {
+                /* adjust search icon */
+                top: -0.64rem;
+            }
+        }
+
+        .dropdown-button {
+            width: 20rem;
+            padding: 0;
+
+            font-size: 1.6rem;
+        }
+    }
+}
+
+#slide-out {
+    .side-cat-menu {
+        span {
+            margin-left: 3.2rem;
+            line-height: 4.8rem;
+        }
+    }
+}
+
+
+/* style of article list */
+.article-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+
+    .article-list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        padding: 2rem;
+        margin: 1rem auto;
+        text-align: center;
+        background-color: #ccf7ff;
+        border-radius: 1rem;
+
+        .post-image {
+            display: block;
+            background-color: #fff;
+            border-radius: 1rem;
+        }
+
+        .post-title {
+            h2 {
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+        }
+
+        .post-meta {
+            text-align: right;
+
+            a,
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .excerpt {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+    }
+}
+
+/* style of pagination */
+.pagination-box .pagination {
+    margin: 1rem auto;
+    text-align: center;
+
+    .screen-reader-text {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        word-wrap: normal !important;
+    }
+
+    .nav-links {
+        height: 4rem;
+        font-size: 1.2rem;
+        text-align: center;
+
+        .page-numbers {
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+
+        .current {
+            background-color: gray;
+        }
+    }
+}

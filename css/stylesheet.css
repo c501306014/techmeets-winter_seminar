@@ -4,6 +4,8 @@ html {
 
 h1 {
   font-size: 3.2rem;
+  padding: 1rem;
+  border-left: 3px solid red;
 }
 
 h2 {
@@ -14,8 +16,10 @@ a,
 button,
 h3,
 i,
+input,
 p,
-span {
+span,
+.btn {
   font-size: 1.6rem;
 }
 
@@ -24,90 +28,25 @@ section {
   margin: 0 auto;
 }
 
-.article-list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 30%;
-  padding: 2rem;
-  margin: 1rem auto;
-  text-align: center;
-  background-color: #ccf7ff;
-  border-radius: 1rem;
+/* custom of materialize css */
+.material-icons {
+  vertical-align: middle;
 }
 
-.article-list-item .post-image {
-  background-color: #fff;
-  border-radius: 1rem;
-}
-
-.article-list-item .post-title h2 {
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
   font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.article-list-item .post-meta {
-  text-align: right;
-}
-
-.article-list-item .excerpt {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  text-align: left;
-}
-
-/* section post-list @index.php */
-#post-list main h1 {
-  padding: 1rem;
-  font-size: 3.2rem;
-  border-left: 3px solid red;
-}
-
-#post-list main .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-}
-
-#post-list main .pagination-box .pagination {
-  margin: 1rem auto;
-  text-align: center;
-}
-
-#post-list main .pagination-box .pagination .screen-reader-text {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  word-wrap: normal !important;
-}
-
-#post-list main .pagination-box .pagination .nav-links {
-  height: 4rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-#post-list main .pagination-box .pagination .nav-links .page-numbers {
-  padding: 1rem;
-  border: 1px solid black;
-  border-radius: 10%;
-}
-
-#post-list main .pagination-box .pagination .nav-links .current {
-  background-color: gray;
 }
 
 /* header */
@@ -130,6 +69,7 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 nav .nav-wrapper {
@@ -141,30 +81,127 @@ nav .nav-wrapper {
           justify-content: space-evenly;
 }
 
+nav .nav-wrapper * {
+  font-size: 1.6rem;
+}
+
+nav .nav-wrapper #searchform {
+  width: 20rem;
+}
+
 nav .nav-wrapper #searchform .input-field .label-icon {
   /* adjust search icon */
   top: -0.64rem;
 }
 
 nav .nav-wrapper .dropdown-button {
-  width: 12rem;
+  width: 20rem;
+  padding: 0;
+  font-size: 1.6rem;
 }
 
 #slide-out .side-cat-menu span {
-  padding: 0 32px;
-  margin-left: 32px;
+  margin-left: 3.2rem;
+  line-height: 4.8rem;
+}
+
+/* style of article list */
+.article-list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.article-list-container .article-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+  background-color: #ccf7ff;
+  border-radius: 1rem;
+}
+
+.article-list-container .article-list-item .post-image {
+  display: block;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.article-list-container .article-list-item .post-title h2 {
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
-.material-icons {
-  vertical-align: middle;
+.article-list-container .article-list-item .post-meta {
+  text-align: right;
+}
+
+.article-list-container .article-list-item .post-meta a,
+.article-list-container .article-list-item .post-meta p {
+  font-size: 1.2rem;
+}
+
+.article-list-container .article-list-item .excerpt {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* style of pagination */
+.pagination-box .pagination {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.pagination-box .pagination .screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal !important;
+}
+
+.pagination-box .pagination .nav-links {
+  height: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.pagination-box .pagination .nav-links .page-numbers {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+.pagination-box .pagination .nav-links .current {
+  background-color: gray;
 }
 
 @media screen and (max-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
   section {
     max-width: 300px;
   }
-  .article-list-item {
+  .article-list-container .article-list-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,42 +219,27 @@ nav .nav-wrapper .dropdown-button {
     background-color: #ccf7ff;
     border-radius: 1rem;
   }
-  .article-list-item .post-image {
+  .article-list-container .article-list-item .post-image {
     background-color: #fff;
     border-radius: 1rem;
   }
-  .article-list-item .post-title h2 {
+  .article-list-container .article-list-item .post-title h2 {
     font-size: 1.6rem;
     font-weight: bold;
   }
-  .article-list-item .post-meta {
+  .article-list-container .article-list-item .post-meta {
     text-align: right;
   }
-  .article-list-item .excerpt {
+  .article-list-container .article-list-item .excerpt {
     margin-top: 1rem;
     font-size: 1.2rem;
     text-align: left;
   }
-  /* section post-list @index.php */
-  #post-list main h1 {
-    padding: 1rem;
-    font-size: 3.2rem;
-    border-left: 3px solid red;
-  }
-  #post-list main .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-  }
-  #post-list main .pagination-box .pagination {
+  .pagination-box .pagination {
     margin: 1rem auto;
     text-align: center;
   }
-  #post-list main .pagination-box .pagination .screen-reader-text {
+  .pagination-box .pagination .screen-reader-text {
     position: absolute !important;
     width: 1px;
     height: 1px;
@@ -225,17 +247,17 @@ nav .nav-wrapper .dropdown-button {
     clip: rect(1px, 1px, 1px, 1px);
     word-wrap: normal !important;
   }
-  #post-list main .pagination-box .pagination .nav-links {
+  .pagination-box .pagination .nav-links {
     height: 4rem;
     font-size: 1.2rem;
     text-align: center;
   }
-  #post-list main .pagination-box .pagination .nav-links .page-numbers {
+  .pagination-box .pagination .nav-links .page-numbers {
     padding: 1rem;
     border: 1px solid black;
     border-radius: 10%;
   }
-  #post-list main .pagination-box .pagination .nav-links .current {
+  .pagination-box .pagination .nav-links .current {
     background-color: gray;
   }
 }
