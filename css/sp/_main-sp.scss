@@ -1,0 +1,52 @@
+@media screen and (max-width: 1024px) {
+    @import "common-sp";
+
+
+    /* section post-list @index.php */
+    #post-list {
+        main {
+            h1 {
+                padding: 1rem;
+                font-size: 3.2rem;
+                border-left: 3px solid red;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .pagination-box .pagination {
+                margin: 1rem auto;
+                text-align: center;
+
+                .screen-reader-text {
+                    position: absolute !important;
+                    width: 1px;
+                    height: 1px;
+                    overflow: hidden;
+                    clip: rect(1px, 1px, 1px, 1px);
+                    word-wrap: normal !important;
+                }
+
+                .nav-links {
+                    height: 4rem;
+                    font-size: 1.2rem;
+                    text-align: center;
+
+                    .page-numbers {
+                        padding: 1rem;
+                        border: 1px solid black;
+                        border-radius: 10%;
+                    }
+
+                    .current {
+                        background-color: gray;
+                    }
+                }
+            }
+        }
+    }
+}

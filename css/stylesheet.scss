@@ -1,4 +1,6 @@
-@import "common";
+@import "pc/common";
+@import "pc/post-list";
+
 
 /* header */
 header {
@@ -6,11 +8,11 @@ header {
     text-align: center;
 
     #header-logo {
-        height: 12rem;
+        height: 8rem;
 
         .custom-logo-link .custom-logo {
-            height: 100%;
             width: auto;
+            height: 100%;
         }
     }
 }
@@ -26,7 +28,7 @@ nav {
 
         #searchform .input-field .label-icon {
             /* adjust search icon */
-            top: -.64rem;
+            top: -0.64rem;
         }
 
         .dropdown-button {
@@ -35,83 +37,20 @@ nav {
     }
 }
 
+#slide-out {
+    .side-cat-menu {
+        span {
+            padding: 0 32px;
+            margin-left: 32px;
+            font-weight: bold;
+        }
+    }
+}
+
 // main {
 //     // width: 900px;
 //     padding: 0 20px;
 //     margin: auto;
-
-// }
-
-// #post-list {
-//     h1 {
-//         padding: 1rem;
-//         font-size: 3.2rem;
-//         border-left: 3px solid red;
-//     }
-
-//     .container {
-//         // width: 60rem;
-//         // display: flex;
-//         // flex-wrap: wrap;
-
-//         .item {
-//             padding: 1rem;
-
-//             text-align: center;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-
-//             .post-image {
-//                 height: 15rem;
-//                 width: auto;
-//             }
-
-//             .post-title {
-//                 h2 {
-//                     font-size: 3.6rem;
-//                 }
-//             }
-
-//             .post-meta {
-//                 text-align: right;
-//             }
-
-//             .excerpt {
-//                 font-size: 1.2rem;
-//                 text-align: left;
-//             }
-//         }
-
-//         .pagination {
-//             width: 100%;
-
-//             .screen-reader-text {
-//                 clip: rect(1px, 1px, 1px, 1px);
-//                 height: 1px;
-//                 overflow: hidden;
-//                 position: absolute !important;
-//                 width: 1px;
-//                 word-wrap: normal !important;
-//             }
-
-//             .nav-links {
-//                 height: 4rem;
-//                 font-size: 1.2rem;
-//                 text-align: center;
-
-//                 .page-numbers {
-//                     padding: 1rem;
-//                     border: 1px solid black;
-//                     border-radius: 10%;
-//                 }
-
-//                 .current {
-//                     background-color: gray;
-//                 }
-//             }
-//         }
-//     }
 
 // }
 
@@ -143,3 +82,5 @@ nav {
 .material-icons {
     vertical-align: middle;
 }
+
+@import "sp/main-sp";

@@ -1,0 +1,37 @@
+section {
+    max-width: 300px;
+}
+
+.article-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #ccf7ff;
+    border-radius: 1rem;
+
+    .post-image {
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    .post-title {
+        h2 {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+    }
+
+    .post-meta {
+        text-align: right;
+    }
+
+    .excerpt {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+}

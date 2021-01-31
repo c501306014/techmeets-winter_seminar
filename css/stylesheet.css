@@ -1,6 +1,113 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+a,
+button,
+h3,
+i,
+p,
+span {
+  font-size: 1.6rem;
+}
+
+section {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.article-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
+  padding: 2rem;
+  margin: 1rem auto;
+  text-align: center;
+  background-color: #ccf7ff;
+  border-radius: 1rem;
+}
+
+.article-list-item .post-image {
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.article-list-item .post-title h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.article-list-item .post-meta {
+  text-align: right;
+}
+
+.article-list-item .excerpt {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* section post-list @index.php */
+#post-list main h1 {
+  padding: 1rem;
+  font-size: 3.2rem;
+  border-left: 3px solid red;
+}
+
+#post-list main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#post-list main .pagination-box .pagination {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#post-list main .pagination-box .pagination .screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal !important;
+}
+
+#post-list main .pagination-box .pagination .nav-links {
+  height: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#post-list main .pagination-box .pagination .nav-links .page-numbers {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+#post-list main .pagination-box .pagination .nav-links .current {
+  background-color: gray;
 }
 
 /* header */
@@ -10,12 +117,12 @@ header {
 }
 
 header #header-logo {
-  height: 12rem;
+  height: 8rem;
 }
 
 header #header-logo .custom-logo-link .custom-logo {
-  height: 100%;
   width: auto;
+  height: 100%;
 }
 
 /* navigation */
@@ -36,14 +143,100 @@ nav .nav-wrapper {
 
 nav .nav-wrapper #searchform .input-field .label-icon {
   /* adjust search icon */
-  top: -.64rem;
+  top: -0.64rem;
 }
 
 nav .nav-wrapper .dropdown-button {
   width: 12rem;
 }
 
+#slide-out .side-cat-menu span {
+  padding: 0 32px;
+  margin-left: 32px;
+  font-weight: bold;
+}
+
 .material-icons {
   vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    max-width: 300px;
+  }
+  .article-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #ccf7ff;
+    border-radius: 1rem;
+  }
+  .article-list-item .post-image {
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+  .article-list-item .post-title h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .article-list-item .post-meta {
+    text-align: right;
+  }
+  .article-list-item .excerpt {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  /* section post-list @index.php */
+  #post-list main h1 {
+    padding: 1rem;
+    font-size: 3.2rem;
+    border-left: 3px solid red;
+  }
+  #post-list main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #post-list main .pagination-box .pagination {
+    margin: 1rem auto;
+    text-align: center;
+  }
+  #post-list main .pagination-box .pagination .screen-reader-text {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal !important;
+  }
+  #post-list main .pagination-box .pagination .nav-links {
+    height: 4rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #post-list main .pagination-box .pagination .nav-links .page-numbers {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10%;
+  }
+  #post-list main .pagination-box .pagination .nav-links .current {
+    background-color: gray;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */
