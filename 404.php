@@ -2,9 +2,9 @@
 
 <section>
     <main>
-        <h5>
+        <h2>
             お探しのページは見つかりませんでした
-        </h5>
+        </h2>
     </main>
 </section>
 

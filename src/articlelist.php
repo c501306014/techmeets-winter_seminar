@@ -1,9 +1,7 @@
-    <div class="item col l4 m6 s12">
-        <div class="post-image">
-            <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail('thumbnail'); ?>
-            </a>
-        </div>
+    <div class="article-list-item">
+        <a class="post-image" href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('thumbnail'); ?>
+        </a>
         <div class="post-title">
             <h2><?php the_title(); ?></h2>
         </div>

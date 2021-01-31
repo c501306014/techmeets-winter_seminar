@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- read ress.css -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
@@ -29,15 +30,13 @@
                 bloginfo('name');
             } ?>
         </div><!-- /logo -->
-
-
-
     </header>
 
     <nav>
         <div class="nav-wrapper">
             <!-- search form -->
             <?php get_search_form(); ?>
+
             <!-- category -->
             <?php $args = array(
                 'parent' => 0,
@@ -46,7 +45,7 @@
             );
             $categories = get_categories($args);
             ?>
-            <div>
+            <div class="hide-on-med-and-down">
                 <ul id="dropdown2" class="dropdown-content">
                     <?php foreach ($categories as $category) : ?>
                         <li><a href="<?php echo get_category_link($category->term_id) ?>"><?php echo $category->name; ?></a></li>
@@ -67,11 +66,20 @@
         </div>
     </nav>
 
-    <!-- links-mobile -->
-    <?php if (is_active_sidebar('header-widgets')) : ?>
-        <ul id="slide-out" class="side-nav">
-            <?php dynamic_sidebar('header-widgets'); ?>
+    <ul id="slide-out" class="side-nav">
+        <!-- links-mobile -->
+        <?php if (is_active_sidebar('header-widgets')) : ?>
+            <ul>
+                <?php dynamic_sidebar('header-widgets'); ?>
+            </ul>
+        <?php else : ?>
+            <h1>not found sidebar</h1>
+        <?php endif; ?>
+        <!-- category-mobile -->
+        <ul class="side-cat-menu">
+            <span>カテゴリー一覧</span>
+            <?php foreach ($categories as $category) : ?>
+                <li><a href="<?php echo get_category_link($category->term_id) ?>">> <?php echo $category->name; ?></a></li>
+            <?php endforeach; ?>
         </ul>
-    <?php else : ?>
-        <h1>not found sidebar</h1>
-    <?php endif; ?>
+    </ul>

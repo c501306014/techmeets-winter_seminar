@@ -5,20 +5,29 @@
         <section>
             <main>
                 <div class="post-title">
-                    <h1><?php bloginfo('name');
-                        wp_title('|', true, 'left'); ?></h1>
+                    <h1><?php the_title(); ?></h1>
                 </div>
                 <!-- パンくずメニュー -->
                 <div>
-                    <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>&nbsp;>&nbsp;
-                    <?php $cat = get_the_category();
-                    echo get_category_parents($cat[0], true, '&nbsp;>&nbsp;'); ?>
-                    <?php the_title(''); ?>
+                    <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a><span>&nbsp;>&nbsp;</span>
+                    <span>
+                        <?php $cat = get_the_category(); ?>
+                        <?php echo get_category_parents($cat[0], true, '&nbsp;>&nbsp;'); ?>
+                        <?php the_title(''); ?>
+                    </span>
                 </div>
                 <!-- /パンくずメニュー -->
+                <!-- share links -->
+                <span>記事をシェアする｜</span>
+                <a href="https://twitter.com/share?text=<?php the_title(); ?> &url=<?php the_permalink(); ?>">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
                 <!-- カスタムフィールドメタ情報 -->
                 <div class="custom-field">
-                    <p>カスタムフィールドゾーン</p>
+                    <!-- <p>カスタムフィールドゾーン</p> -->
                     <?php
                     $meta = get_post_meta(get_the_ID(), 'html');
                     if ($meta) {
@@ -39,7 +48,7 @@
                         }
                     }
                     ?>
-                    <p>カスタムフィールドゾーンここまで</p>
+                    <!-- <p>カスタムフィールドゾーンここまで</p> -->
                 </div>
                 <!-- /カスタムフィールドメタ情報 -->
                 <div class="post-image">
@@ -57,13 +66,7 @@
                 </section>
                 <?php previous_post_link('&laquo; %link', '前の記事へ'); ?>
                 <?php next_post_link('%link &raquo;', '後の記事へ'); ?>
-                <!-- share links -->
-                <a href="https://twitter.com/share?text=<?php the_title(); ?> &url=<?php the_permalink(); ?>">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+
             </main>
         </section>
 
@@ -87,13 +90,16 @@ endif; ?>
             $related_posts = new WP_Query($args);
             if ($related_posts->have_posts()) :
         ?>
-                <h3>関連記事</h3>
-        <?php
+                <h2>関連記事</h2>
+                <div class="article-list-container">
+
+            <?php
                 while ($related_posts->have_posts()) : $related_posts->the_post();
                     get_template_part('/src/articlelist');
                 endwhile;
             endif;
         endif; ?>
+                </div>
     </main>
 </section>
 

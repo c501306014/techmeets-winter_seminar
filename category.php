@@ -2,7 +2,7 @@
 
 <section>
     <main>
-        <h1><?php single_cat_title(); ?></h1>
+        <h1>"<?php single_cat_title(); ?>"の記事一覧です</h1>
         <div>
             <?php
             if (category_description()) :
@@ -12,12 +12,12 @@
         </div>
 
         <!-- パンくずメニュー -->
-        <a href="<?php bloginfo('url'); ?>">TOP</a>&nbsp;>&nbsp;
+        <a href="<?php bloginfo('url'); ?>">TOP</a><span>&nbsp;>&nbsp;</span>
         <?php $cat = get_the_category();
         echo get_category_parents($cat[0], true, '&nbsp;'); ?>
         <!-- /パンくずメニュー -->
 
-        <div class="container">
+        <div class="article-list-container">
             <?php
             if (have_posts()) : while (have_posts()) : the_post();
                     get_template_part('/src/articlelist');
